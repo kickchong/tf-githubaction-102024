@@ -22,9 +22,10 @@ jobs:
     steps:
     - name: 'Checkout GitHub repository'
       uses: actions/checkout@v4
-
-    - name: Dependency Review
+    - name: 'Dependency Review'
       uses: actions/dependency-review-action@v4
+      with:
+          fail-on-severity: moderate
 
     - name: 'Configure AWS credentials'
       uses: aws-actions/configure-aws-credentials@v4
